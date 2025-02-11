@@ -1,0 +1,52 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Poupança Xitique</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Sistema de Poupança Xitique</h1>
+    </header>
+
+    <main>
+      <section class="add-user">
+        <h2>Adicionar Usuário</h2>
+        <form id="userForm">
+          <input type="text" id="userName" placeholder="Nome do usuário" required>
+          <button type="submit">Adicionar</button>
+        </form>
+      </section>
+
+      <section class="add-savings">
+        <h2>Registrar Poupança</h2>
+        <form id="savingsForm">
+          <select id="userSelect" required>
+            <option value="">Selecione um usuário</option>
+          </select>
+          <input type="number" id="amount" placeholder="Valor" required min="0" step="0.01">
+          <input type="date" id="savingDate" required>
+          <button type="submit">Registrar</button>
+        </form>
+      </section>
+
+      <section class="savings-display">
+        <div class="total-savings">
+          <h2>Poupança Total do Grupo</h2>
+          <p id="totalAmount">MT 0.00</p>
+        </div>
+        
+        <div class="individual-savings">
+          <h2>Poupança Individual</h2>
+          <div id="savingsList" class="savings-list"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
