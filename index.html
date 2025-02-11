@@ -12,9 +12,18 @@
       <h1>Sistema de Poupança Xitique</h1>
     </header>
 
-    <main>
-      <section class="add-user">
-        <h2>Adicionar Usuário</h2>
+    <section id="loginSection">
+      <h2>Login Administrador</h2>
+      <form id="loginForm">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+
+    <main id="mainContent" style="display: none;">
+      <section id="adminSection" style="display: none;">
+        <h2>Administração</h2>
         <form id="userForm">
           <input type="text" id="userName" placeholder="Nome do usuário" required>
           <button type="submit">Adicionar</button>
